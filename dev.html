@@ -17,18 +17,18 @@
         <cc-global-footer />
     </div>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="./dist/cc-global.min.js"></script>
+    <script src="./dist/cc-globals.min.js"></script>
     <script>
         const cc_explore = Vue.createApp({})
-        cc_explore.use(CcGlobal)
+        cc_explore.use(CcGlobals)
         cc_explore.mount('#explore-cc')
 
         const cc_header = Vue.createApp({})
-        cc_header.use(CcGlobal)
+        cc_header.use(CcGlobals)
         cc_header.mount('#header-cc')
 
         const cc_footer = Vue.createApp({})
-        cc_footer.use(CcGlobal)
+        cc_footer.use(CcGlobals)
         cc_footer.mount('#footer-cc')
         
     </script>
