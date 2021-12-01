@@ -54,7 +54,11 @@
 </template>
 <script>
     import { defineComponent } from 'vue';
-    const axios = require('axios');
+    if(process.env.NODE_ENV === 'development'){
+        var axios = require('axios');
+    } else {
+        var axios = window.axios
+    }
     export default defineComponent({
         name: 'cc-golbal-header',
         beforeCreate() {
