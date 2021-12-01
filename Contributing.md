@@ -24,7 +24,7 @@ npm run build:unpkg
 ```
 
 ### Testing Locally
-To test locally how it will behave when hosted on a CDN, create a base HTML file: 
+To test locally how it will behave when hosted on a CDN, serve the file `dev.html` found in the root directory: 
   ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -32,7 +32,7 @@ To test locally how it will behave when hosted on a CDN, create a base HTML file
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Testing CC Global Components</title>
+        <title>CC Global Components</title>
     </head>
     <body>
         <div id="explore-cc">

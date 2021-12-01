@@ -6,7 +6,7 @@
             </div>
             <div class="navbar-menu is-active">
                 <div class="navbar-start">
-                    <!-- Locale options -->
+                    <!-- Locale options 
                     <div class="locale">
                         <div class="select">
                             <select>
@@ -21,7 +21,7 @@
                         <span class="icon caret-down is-small is-right">
                             <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M7.45896 11.25H22.5351c1.043 0 1.5645 1.2598.8262 1.998l-7.5352 7.5411c-.457.457-1.2011.457-1.6582 0L6.63279 13.248c-.73828-.7382-.2168-1.998.82617-1.998z" fill="currentColor"></path></svg>
                         </span>
-                    </div>
+                    </div>-->
                     <!-- Donate button -->
                     <a class="button donate" href="https://creativecommons.org/donate?c_src=website&amp;c_src2=NavBar">
                         <i class="icon heart"></i>
@@ -109,12 +109,12 @@
         name: 'cc-golbal-header',
         props: {
             ariaPrimaryLabel: {
-            type: String,
-            default: "Main",
+                type: String,
+                default: "Main",
             },
             ariaMenuLabel: {
-            type: String,
-            default: "Menu",
+                type: String,
+                default: "Menu",
             },
         },
         data: () => ({ isBurgerMenuActive: false }),

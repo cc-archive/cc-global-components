@@ -11,7 +11,7 @@ The folder structure is as follows:
 - `build/` : This has the rollup config for compiling files.
 - `dev/`: Use for serving the components for local testing during development.
 - `src`: This directory contains a sub-directory:
-    - `liv-components`: This is where our components code is found. For this project, we have three components: 
+    - `components`: This is where our components code is found. For this project, we have three components: 
       - `cc-explore.vue`: The component for the Explore CC banner.
       - `cc-global-header.vue`: The component for the Global Navigation Menus
       - `cc-global-footer.vue`: The component for the Global CC footer.
