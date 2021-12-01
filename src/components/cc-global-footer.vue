@@ -3,12 +3,8 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-one-quarter">
-                    <a href="https://creativecommons.org" aria-label="home" class="main-logo margin-bottom-bigger">
-                        <span class="has-text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 304 73">
-                                <use href="logos/cc/logomark.svg#logomark"></use>
-                            </svg>
-                        </span>
+                    <a href="/" aria-label="home" class="main-logo margin-bottom-bigger">
+                       <img src="../../assets/cc_logo_white.png" class="w-full" alt="Creative Commons Logo">
                     </a>
                     <div>
                         <address class="margin-bottom-normal">Creative Commons<br>PO Box 1866, Mountain View CA 94042</address>
