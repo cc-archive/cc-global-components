@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CC Global Components</title>
+  </head>
+  <body>
+    <!-- Div element used to mount the Explore CC component-->
+    <div id="explore-cc">
+      <cc-explore />
+    </div>
+
+    <!-- Div element used to mount the Global Header component-->
+    <div id="header-cc">
+      <cc-global-header />
+    </div>
+
+    <!-- Div element used to mount the Global Footer component-->
+    <div id="footer-cc">
+      <cc-global-footer />
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- Import Vue JS via CDN -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Import Axios via CDN. Needed for the Global Header Component -->
+    <script src="./dist/cc-globals.min.js"></script>
+    <!-- Import the Component Library. In production, this should be replaced with the CDN url.-->
+    <script>
+      /* Import and use the Explore CC component */
+      const cc_explore = Vue.createApp({});
+      cc_explore.use(CcGlobals);
+      cc_explore.mount("#explore-cc");
+
+      /* Import and use the CC Global Header component */
+      const cc_header = Vue.createApp({});
+      cc_header.use(CcGlobals);
+      cc_header.mount("#header-cc");
+
+      /* Import and use the CC Global Footer component */
+      const cc_footer = Vue.createApp({});
+      cc_footer.use(CcGlobals);
+      cc_footer.mount("#footer-cc");
+    </script>
+  </body>
+</html>
