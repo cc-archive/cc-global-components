@@ -35,7 +35,7 @@ npm run build:unpkg
 
 ### Testing Locally
 
-To test locally how it will behave when hosted on a CDN, serve the file `dev.html` found in the root directory.
+To test locally how it will behave when hosted on a CDN, serve the file `example.html` found in the root directory.
 To include the components in an HTML template:
 
 - Add Vue JS via CDN
@@ -59,7 +59,7 @@ Example for the `cc-explore` component:
 </script>
 ```
 
-For the `cc-global-header` componenet, you will need to add Axios via CDN:
+For the `cc-global-header` component, you will need to add Axios via CDN:
 
 ```html
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
