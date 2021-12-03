@@ -2,6 +2,11 @@
 
 There are many ways to contribute to this project such as testing, design, and development.
 
+## Code of Conduct
+
+By participating in this project, you are expected to uphold our [Code of
+Conduct][code_of_conduct].
+
 ## Development
 
 This section provides information for people who are interested in contributing code.
