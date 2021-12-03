@@ -1,10 +1,10 @@
 <template>
   <transition name="fade" appear>
-    <div @click="closeModal" v-if="show" class="overlay-container">
+    <div @click="closeModal" v-if="show" class="overlay-container" role="button">
       <div class="overlay-modal">
         <div class="modal-body">
           <div class="modal-header">
-            <span @click="closeModal" class="close-button">&times;</span>
+            <span @click="closeModal" class="close-button" aria-label="Close the Donation Modal" role="button">&times;</span>
           </div>
           <div>
             <figure
