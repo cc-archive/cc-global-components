@@ -7,6 +7,11 @@
     <title>CC Global Components</title>
   </head>
   <body>
+    <!-- Div element use to mound the CC Donate modal-->
+    <div id="donate-cc">
+      <cc-donate />
+    </div>
+
     <!-- Div element used to mount the Explore CC component-->
     <div id="explore-cc">
       <cc-explore />
@@ -28,6 +33,11 @@
     <script src="./dist/cc-globals.min.js"></script>
     <!-- Import the Component Library. In production, this should be replaced with the CDN url.-->
     <script>
+      /* Import and use the CC Donate Modal */
+      const cc_donate = Vue.createApp({});
+      cc_donate.use(CcGlobals);
+      cc_donate.mount("#donate-cc");
+
       /* Import and use the Explore CC component */
       const cc_explore = Vue.createApp({});
       cc_explore.use(CcGlobals);

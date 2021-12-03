@@ -1,5 +1,6 @@
 <script>
 import { defineComponent } from "vue";
+import CcDonate from "../src/components/cc-donate.vue";
 import CcExplore from "../src/components/cc-explore.vue";
 import CcGlobalFooter from "../src/components/cc-global-footer.vue";
 import CcGlobalHeader from "../src/components/cc-global-header.vue";
@@ -7,7 +8,7 @@ import CcGlobalHeader from "../src/components/cc-global-header.vue";
 // import { CcGlobalsSample } from '@/entry.esm';
 
 export default defineComponent({
-  components: { CcExplore, CcGlobalHeader, CcGlobalFooter },
+  components: { CcExplore, CcGlobalHeader, CcGlobalFooter, CcDonate },
   name: "ServeDev",
   // components: {
   //  CcGlobalsSample,
@@ -18,6 +19,7 @@ export default defineComponent({
 <template>
   <div id="app">
     <cc-explore />
+    <cc-donate />
     <cc-global-header />
     <cc-global-footer />
   </div>

@@ -16,6 +16,7 @@ The folder structure is as follows:
 - `dev/`: Use for serving the components for local testing during development.
 - `src`: This directory contains a sub-directory:
   - `components`: This is where our components code is found. For this project, we have three components:
+  - - `cc-donate.vue`: The component for the CC Donatiion modal.
     - `cc-explore.vue`: The component for the Explore CC banner.
     - `cc-global-header.vue`: The component for the Global Navigation Menus
     - `cc-global-footer.vue`: The component for the Global CC footer.
