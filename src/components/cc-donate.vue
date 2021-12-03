@@ -1,10 +1,21 @@
 <template>
   <transition name="fade" appear>
-    <div @click="closeModal" v-if="show" class="overlay-container" role="button">
+    <div
+      @click="closeModal"
+      v-if="show"
+      class="overlay-container"
+      role="button"
+    >
       <div class="overlay-modal">
         <div class="modal-body">
           <div class="modal-header">
-            <span @click="closeModal" class="close-button" aria-label="Close the Donation Modal" role="button">&times;</span>
+            <span
+              @click="closeModal"
+              class="close-button"
+              aria-label="Close the Donation Modal"
+              role="button"
+              >&times;</span
+            >
           </div>
           <div>
             <figure
@@ -60,7 +71,7 @@
 </template>
 <script>
 import { defineComponent } from "vue";
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
 
 export default defineComponent({
   name: "cc-explore",
@@ -71,7 +82,7 @@ export default defineComponent({
       this.show = false;
       this.transition = false;
     }
-    console.log('opted out?: ', userHasOptedOutFromDonationAppeal);
+    console.log("opted out?: ", userHasOptedOutFromDonationAppeal);
   },
   data() {
     return {
@@ -86,7 +97,9 @@ export default defineComponent({
       this.optOutDonationAppeal();
     },
     optOutDonationAppeal() {
-      Cookies.set("optOutDonationAppeal", "true", { expires: this.expiryPeriodInDays });
+      Cookies.set("optOutDonationAppeal", "true", {
+        expires: this.expiryPeriodInDays,
+      });
       Cookies.set("_ga", undefined);
     },
   },
