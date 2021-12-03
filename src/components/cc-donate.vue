@@ -60,18 +60,18 @@
 </template>
 <script>
 import { defineComponent } from "vue";
+import Cookies from 'js-cookie';
 
 export default defineComponent({
   name: "cc-explore",
   mounted() {
-    var userHasNotOptedOutFromDonationAppeal = this.getCookie(
-      "optOutDonationAppeal"
-    );
-    if (userHasNotOptedOutFromDonationAppeal) {
+    var userHasOptedOutFromDonationAppeal = Cookies.get("optOutDonationAppeal");
+
+    if (userHasOptedOutFromDonationAppeal) {
       this.show = false;
       this.transition = false;
     }
-    console.log(userHasNotOptedOutFromDonationAppeal);
+    console.log('opted out?: ', userHasOptedOutFromDonationAppeal);
   },
   data() {
     return {
@@ -85,30 +85,9 @@ export default defineComponent({
       this.show = false;
       this.optOutDonationAppeal();
     },
-    setCookie(cookie_name, cookie_value) {
-      const d = new Date();
-      d.setTime(d.getTime() + this.expiryPeriodInDays * 24 * 60 * 60 * 1000);
-      let expires = "expires=" + d.toUTCString();
-      document.cookie =
-        cookie_name + "=" + cookie_value + ";" + expires + ";path=/";
-    },
-    getCookie(cookie_name) {
-      let name = cookie_name + "=";
-      let decodedCookie = decodeURIComponent(document.cookie);
-      let ca = decodedCookie.split(";");
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == " ") {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    },
     optOutDonationAppeal() {
-      this.setCookie("optOutDonationAppeal", true);
+      Cookies.set("optOutDonationAppeal", "true", { expires: this.expiryPeriodInDays });
+      Cookies.set("_ga", undefined);
     },
   },
 });
