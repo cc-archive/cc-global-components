@@ -36,11 +36,7 @@
                   ></span
                 >
                 is licensed under
-                <a
-                  href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html"
-                  style="margin-right: 5px"
-                  >CC BY 2.0</a
-                >
+                <a :href="donationUrl" style="margin-right: 5px">CC BY 2.0</a>
               </p>
             </figure>
           </div>
@@ -89,6 +85,8 @@ export default defineComponent({
       show: true,
       transition: true,
       expiryPeriodInDays: 5,
+      donationUrl:
+        "https://www.classy.org/give/306414/#!/donation/checkout?c_src=website&c_src2=lightboxA",
     };
   },
   methods: {
