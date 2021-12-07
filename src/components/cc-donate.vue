@@ -200,7 +200,6 @@ export default defineComponent({
   text-align: left;
   background: #fff;
   border-radius: 5px;
-  /*   width: auto; */
   width: 600px;
   height: auto;
   position: fixed;
