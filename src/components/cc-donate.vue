@@ -156,7 +156,6 @@ export default defineComponent({
 
 .modal-footer {
   padding: 2px 5px;
-  /*  background-color: #FEEDE9;*/
   color: black;
 }
 
