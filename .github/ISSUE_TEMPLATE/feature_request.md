@@ -17,6 +17,3 @@ title: "[Feature] <Replace this with actual title>"
 ## Additional context
 <!-- Add any other context about the feature here; or delete the section entirely. -->
 
-## Implementation
-<!-- Replace the [ ] with [x] to check the box. -->
-- [ ] I would be interested in implementing this feature.
