@@ -78,7 +78,6 @@ export default defineComponent({
       this.show = false;
       this.transition = false;
     }
-    console.log("opted out?: ", userHasOptedOutFromDonationAppeal);
   },
   data() {
     return {
