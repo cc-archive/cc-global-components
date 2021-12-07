@@ -97,7 +97,6 @@ export default defineComponent({
       Cookies.set("optOutDonationAppeal", "true", {
         expires: this.expiryPeriodInDays,
       });
-      Cookies.set("_ga", undefined);
     },
   },
 });
