@@ -198,7 +198,6 @@ export default defineComponent({
   margin: 0px;
   padding: 10px;
   text-align: left;
-  /* height: 100px; */
   background: #fff;
   border-radius: 5px;
   /*   width: auto; */
