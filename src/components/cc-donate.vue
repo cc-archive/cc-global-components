@@ -70,7 +70,7 @@ import { defineComponent } from "vue";
 import Cookies from "js-cookie";
 
 export default defineComponent({
-  name: "cc-explore",
+  name: "cc-donate",
   mounted() {
     var userHasOptedOutFromDonationAppeal = Cookies.get("optOutDonationAppeal");
 
