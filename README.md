@@ -23,7 +23,7 @@ The folder structure is as follows:
 
 ## Development
 
-See [Contributing.md](Contributing.md).
+See our [contributing guide](CONTRIBUTING.md).
 
 ## License
 
