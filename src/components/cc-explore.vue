@@ -41,7 +41,8 @@
               <p class="">Help us keep the internet free and open.</p>
               <a
                 class="button small donate"
-                href="https://us.netdonor.net/page/6650/donate/1?ea.tracking.id=global-navigation-bar"
+                target="_blank"
+                :href="donation_link"
               >
                 <i
                   class="icon cc-letterheart margin-right-small is-size-5 padding-top-smaller"
@@ -133,9 +134,16 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "cc-explore",
+  props: {
+    donation_url: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
       isActive: false,
+      donation_link: this.donation_url
     };
   },
   methods: {
