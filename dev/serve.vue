@@ -17,8 +17,8 @@ export default defineComponent({
 
 <template>
   <div id="app">
-    <cc-explore />
-    <cc-global-header />
-    <cc-global-footer />
+    <cc-explore donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner" />
+    <cc-global-header base_url="http://localhost:8000/wp-json/ccnavigation-header/menu" />
+    <cc-global-footer donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner" />
   </div>
 </template>
