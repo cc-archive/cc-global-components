@@ -154,8 +154,6 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-@import url(https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css);
-@import url(https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css);
 .cc-global-header .open-tab {
   display: block;
 }
