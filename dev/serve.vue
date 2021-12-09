@@ -17,10 +17,22 @@ export default defineComponent({
 
 <template>
   <div id="app">
-    <link rel="stylesheet" href="https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css">
-    <link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css">
-    <cc-explore donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner" />
-    <cc-global-header base_url="http://localhost:8000/wp-json/ccnavigation-header/menu" />
-    <cc-global-footer donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css"
+    />
+    <cc-explore
+      donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner"
+    />
+    <cc-global-header
+      base_url="http://localhost:8000/wp-json/ccnavigation-header/menu"
+    />
+    <cc-global-footer
+      donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner"
+    />
   </div>
 </template>

@@ -110,8 +110,8 @@ export default defineComponent({
     },
     base_url: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {

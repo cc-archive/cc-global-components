@@ -137,13 +137,13 @@ export default defineComponent({
   props: {
     donation_url: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       isActive: false,
-      donation_link: this.donation_url
+      donation_link: this.donation_url,
     };
   },
   methods: {

@@ -47,16 +47,22 @@ To include the components in an HTML template:
 - Add the stylesheets for Fonts and Vocabulary
 - Add the build version of the components via a script tag (the output of `npm run build:unpkg`)
 - Import each component, passing it's respective attribute as such and mount it on a corresponding `div` element.
-    - CC Global Header has one required attribute, `base_url`, which is is the URL used for the API call.
-      - `<cc-global-header base_url="http://example.com" />`
-    - CC Global Footer and CC Explore have a `donation_url` attribute which is the URL used for the Donation buttons.
-      - `<cc-global-footer donation_url="http://example.com" />`
+  - CC Global Header has one required attribute, `base_url`, which is is the URL used for the API call.
+    - `<cc-global-header base_url="http://example.com" />`
+  - CC Global Footer and CC Explore have a `donation_url` attribute which is the URL used for the Donation buttons.
+    - `<cc-global-footer donation_url="http://example.com" />`
 
 Example for the `cc-explore` component:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css">
-<link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css"
+/>
 <script src="https://unpkg.com/vue@next"></script>
 <script src="./dist/cc-global.min.js"></script>
 

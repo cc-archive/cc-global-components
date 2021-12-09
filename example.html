@@ -4,24 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css">
-    <link rel="stylesheet" href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css"
+    />
     <title>CC Global Components</title>
   </head>
   <body>
     <!-- Div element used to mount the Explore CC component-->
     <div id="explore-cc">
-      <cc-explore donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner" />
+      <cc-explore
+        donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner"
+      />
     </div>
 
     <!-- Div element used to mount the Global Header component-->
     <div id="header-cc">
-      <cc-global-header base_url="http://localhost:8000/wp-json/ccnavigation-header/menu" />
+      <cc-global-header
+        base_url="http://localhost:8000/wp-json/ccnavigation-header/menu"
+      />
     </div>
 
     <!-- Div element used to mount the Global Footer component-->
     <div id="footer-cc">
-      <cc-global-footer donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner" />
+      <cc-global-footer
+        donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner"
+      />
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <!-- Import Vue JS via CDN -->

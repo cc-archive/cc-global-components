@@ -189,15 +189,14 @@ export default defineComponent({
   props: {
     donation_url: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-       donation_link: this.donation_url
-    }
-  }
+      donation_link: this.donation_url,
+    };
+  },
 });
 </script>
-<style scoped>
-</style>
+<style scoped></style>
