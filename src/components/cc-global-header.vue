@@ -95,7 +95,7 @@ export default defineComponent({
   name: "cc-golbal-header",
   beforeCreate() {
     axios
-      .get("http://localhost:8000/wp-json/ccnavigation-header/menu")
+      .get(this.base_url)
       .then((response) => (this.menus = response.data))
       .then((menus) => console.log(menus));
   },
@@ -108,6 +108,10 @@ export default defineComponent({
       type: String,
       default: "Menu",
     },
+    base_url: {
+      type: String,
+      required: true
+    }
   },
   data() {
     return {
