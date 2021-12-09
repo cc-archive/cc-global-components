@@ -7,7 +7,7 @@
           <!-- Donate button -->
           <a
             class="button donate"
-            href="https://creativecommons.org/donate?c_src=website&amp;c_src2=NavBar"
+            :href="donation_link"
           >
             <i class="icon heart"></i>
             Donate
@@ -112,11 +112,16 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    donation_url: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
       isBurgerMenuActive: false,
       menus: {},
+      donation_link: this.donation_url,
     };
   },
   methods: {

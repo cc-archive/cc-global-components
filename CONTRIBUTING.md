@@ -47,10 +47,11 @@ To include the components in an HTML template:
 - Add the stylesheets for Fonts and Vocabulary
 - Add the build version of the components via a script tag (the output of `npm run build:unpkg`)
 - Import each component, passing it's respective attribute as such and mount it on a corresponding `div` element.
-  - CC Global Header has one required attribute, `base_url`, which is is the URL used for the API call.
-    - `<cc-global-header base_url="http://example.com" />`
-  - CC Global Footer and CC Explore have a `donation_url` attribute which is the URL used for the Donation buttons.
+  - CC Global Header has two required attributes, `base_url` and `donation_url` , which are the URLs used for the API call and the Donation button respectively.
+    - `<cc-global-header base_url="http://example.com" donation_url="http:/example.com" />`
+  - CC Global Footer and CC Explore have just one required attribute each, a `donation_url` attribute which is the URL used for the Donation buttons.
     - `<cc-global-footer donation_url="http://example.com" />`
+    - `cc-explore donation_url="http://example.com" />`
 
 Example for the `cc-explore` component:
 
