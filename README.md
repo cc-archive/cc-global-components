@@ -74,7 +74,7 @@ Example for the `cc-explore` component:
   href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css"
 />
 <script src="https://unpkg.com/vue@next"></script>
-<script src="https://unpkg.com/@creativecommons/cc-global-components/dist/cc-global.min.js"></script>
+<script src="https://unpkg.com/@creativecommons/cc-global-components@0.1.0/dist/cc-globals.min.js"></script>
 
 <div id="explore-cc">
   <cc-explore donation-url="http://example.com" />
