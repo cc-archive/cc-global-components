@@ -95,10 +95,11 @@ if (process.env.NODE_ENV === "development") {
 export default defineComponent({
   name: "cc-golbal-header",
   beforeCreate() {
+    var requestPath = "/wp-json/ccnavigation-header/menu";
+    var requestUrl = this.baseUrl + requestPath;
     axios
-      .get(this.base_url + '/wp-json/ccnavigation-header/menu')
-      .then((response) => (this.menus = response.data))
-      .then((menus) => console.log(menus));
+      .get(requestUrl)
+      .then((response) => (this.menus = response.data));
   },
   props: {
     ariaPrimaryLabel: {
