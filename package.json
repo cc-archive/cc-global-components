@@ -7,6 +7,10 @@
     "component library"
   ],
   "homepage": "https://opensource.creativecommons.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativecommons/cc-global-components.git"
+  }
   "bugs": {
     "url" : "https://github.com/creativecommons/cc-global-components"
   },
