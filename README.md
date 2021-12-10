@@ -28,7 +28,7 @@ The folder structure is as follows:
 CC Global Footer requires a `donation-url` attribute which is the URL used for the Donation button.
 
 ```html
-<cc-explore donation_url="http://example.com" />
+<cc-explore donation-url="http://example.com" />
 ```
 
 ### CC Global Header
@@ -38,7 +38,7 @@ The CC Global Header has two required attributes, `base-url` and `donation-url` 
 ```html
 <cc-global-header
   base-url="http://127.0.0.1:8000"
-  donation_url="http:/example.com"
+  donation-url="http:/example.com"
 />
 ```
 
@@ -47,7 +47,7 @@ The CC Global Header has two required attributes, `base-url` and `donation-url` 
 CC Global Footer requires a `donation-url` attribute which is the URL used for the Donation button.
 
 ```html
-<cc-global-footer donation_url="http://example.com" />
+<cc-global-footer donation-url="http://example.com" />
 ```
 
 ## Usage
