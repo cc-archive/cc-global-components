@@ -7,7 +7,7 @@
           <!-- Donate button -->
           <a
             class="button donate"
-            :href="donation_url"
+            :href="donationUrl"
             target="_blank"
           >
             <i class="icon heart"></i>
@@ -110,11 +110,11 @@ export default defineComponent({
       type: String,
       default: "Menu",
     },
-    base_url: {
+    baseUrl: {
       type: String,
       required: true,
     },
-    donation_url: {
+    donationUrl: {
       type: String,
       required: true,
     },

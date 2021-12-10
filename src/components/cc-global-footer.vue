@@ -166,7 +166,7 @@
                 <p>Help us keep the internet free and open.</p>
                 <a
                   class="button small donate"
-                  :href="donation_url"
+                  :href="donationUrl"
                   target="_blank"
                 >
                   <i
@@ -187,7 +187,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "cc-golbal-footer",
   props: {
-    donation_url: {
+    donationUrl: {
       type: String,
       required: true,
     },

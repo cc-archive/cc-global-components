@@ -42,7 +42,7 @@
               <a
                 class="button small donate"
                 target="_blank"
-                :href="donation_url"
+                :href="donationUrl"
               >
                 <i
                   class="icon cc-letterheart margin-right-small is-size-5 padding-top-smaller"
@@ -135,7 +135,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "cc-explore",
   props: {
-    donation_url: {
+    donationUrl: {
       type: String,
       required: true,
     },
