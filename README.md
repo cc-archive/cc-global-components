@@ -37,7 +37,7 @@ The CC Global Header has two required attributes, `base-url` and `donation-url` 
 
 ```html
 <cc-global-header
-  base_url="http://127.0.0.1:8000"
+  base-url="http://127.0.0.1:8000"
   donation_url="http:/example.com"
 />
 ```
