@@ -29,7 +29,7 @@ export default defineComponent({
       donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner"
     />
     <cc-global-header
-      base_url="http://localhost:8000/wp-json/ccnavigation-header/menu"
+      base_url="http://127.0.0.1:8000"
       donation_url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&amp;c_src2=NavBar"
     />
     <cc-global-footer
