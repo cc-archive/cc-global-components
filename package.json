@@ -1,5 +1,5 @@
 {
-  "name": "cc-global",
+  "name": "cc-global-components",
   "version": "0.1.0",
   "description": "",
   "main": "dist/cc-globals.ssr.js",
