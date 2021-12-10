@@ -20,7 +20,7 @@ In the root folder (`cc-global-components`), run the following commands:
 npm install
 ```
 
-To preview the project, run
+To preview the project ([localhost:8080/](http://localhost:8080/)), run
 
 ```npm
 npm run serve
