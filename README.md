@@ -33,7 +33,7 @@ CC Global Footer requires a `donation-url` attribute which is the URL used for t
 
 ### CC Global Header
 
-The CC Global Header has two required attributes, `base-url` and `donation-url` , which are the URLs used for the API call and the Donation button respectively. For a development environment, the `base-url` could be `http://127.0.0.1:8000`. Note: the `base-url` value should not have a trailing slash.
+The CC Global Header has two required attributes, `base-url` and `donation-url` , which are the URLs used for the API call and the Donation button respectively. For a development environment, the `base-url` could be `http://127.0.0.1:8000`.
 
 ```html
 <cc-global-header
