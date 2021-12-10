@@ -94,4 +94,5 @@ Use the following steps when publishing a new CC Global Components release.
 4. Merge the project metadata changes into the `main` branch
 5. Create a new release/tag on GitHub from the latest commit in `main`
     - use only the version number as the tag (without any prefix or suffix)
-6. Run `npm publish` to publish latest version on NPM
+6. Build the project for NPM/unpkg with `npm run build:unpkg`
+7. Run `npm publish` to publish latest version on NPM
