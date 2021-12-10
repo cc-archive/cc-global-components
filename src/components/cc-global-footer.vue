@@ -72,7 +72,7 @@
               <nav aria-label="footerlinks" class="footer-navigation">
                 <ul class="menu">
                   <li><a href="/about/contact/" class="menu-item">Contact</a></li>
-                  <li><a href="mail.creativecommons.org/subscribe" class="menu-item">Newsletter</a></li>
+                  <li><a href="https://mail.creativecommons.org/subscribe" class="menu-item">Newsletter</a></li>
                   <li><a href="/privacy/" class="menu-item">Privacy</a></li>
                   <li><a href="/policies/" class="menu-item">Policies</a></li>
                   <li><a href="/terms/" class="menu-item">Terms</a></li>
