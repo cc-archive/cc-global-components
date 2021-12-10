@@ -83,3 +83,15 @@ For the `cc-global-header` component, you will need to add Axios via CDN:
 ```html
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
+
+## Publishing a release
+
+Use the following steps when publishing a new CC Global Components release.
+
+1. Choose a release number using [semantic versioning](https://semver.org/)
+2. Update the project version in `package.json`
+3. Run `npm install` to automatically update project metadata in `package-lock.json`
+4. Merge the project metadata changes into the `main` branch
+5. Create a new release/tag on GitHub from the latest commit in `main`
+    - use only the version number as the tag (without any prefix or suffix)
+6. Run `npm publish` to publish latest version on NPM
