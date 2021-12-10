@@ -166,7 +166,8 @@
                 <p>Help us keep the internet free and open.</p>
                 <a
                   class="button small donate"
-                  href="https://creativecommons.org/donate?c_src=website&amp;c_src2=GlobalFooter"
+                  :href="donationUrl"
+                  target="_blank"
                 >
                   <i
                     class="icon cc-letterheart-filled margin-right-small is-size-5 padding-top-smaller"
@@ -185,9 +186,12 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "cc-golbal-footer",
+  props: {
+    donationUrl: {
+      type: String,
+      required: true,
+    },
+  }
 });
 </script>
-<style scoped>
-@import url(https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css);
-@import url(https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css);
-</style>
+<style scoped></style>

@@ -7,7 +7,8 @@
           <!-- Donate button -->
           <a
             class="button donate"
-            href="https://creativecommons.org/donate?c_src=website&amp;c_src2=NavBar"
+            :href="donationUrl"
+            target="_blank"
           >
             <i class="icon heart"></i>
             Donate
@@ -94,10 +95,11 @@ if (process.env.NODE_ENV === "development") {
 export default defineComponent({
   name: "cc-golbal-header",
   beforeCreate() {
+    var requestPath = "/wp-json/ccnavigation-header/menu";
+    var requestUrl = this.baseUrl + requestPath;
     axios
-      .get("http://localhost:8000/wp-json/ccnavigation-header/menu")
-      .then((response) => (this.menus = response.data))
-      .then((menus) => console.log(menus));
+      .get(requestUrl)
+      .then((response) => (this.menus = response.data));
   },
   props: {
     ariaPrimaryLabel: {
@@ -107,6 +109,14 @@ export default defineComponent({
     ariaMenuLabel: {
       type: String,
       default: "Menu",
+    },
+    baseUrl: {
+      type: String,
+      required: true,
+    },
+    donationUrl: {
+      type: String,
+      required: true,
     },
   },
   data() {
@@ -136,8 +146,6 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-@import url(https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css);
-@import url(https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css);
 .navbar-link {
   background: transparent;
   border: none;

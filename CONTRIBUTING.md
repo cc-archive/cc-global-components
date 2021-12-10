@@ -44,17 +44,31 @@ To test locally how it will behave when hosted on a CDN, serve the file `example
 To include the components in an HTML template:
 
 - Add Vue JS via CDN
+- Add the stylesheets for Fonts and Vocabulary
 - Add the build version of the components via a script tag (the output of `npm run build:unpkg`)
-- Import each component as such and mount it on a corresponding `div` element.
+- Import each component, passing it's respective attribute as such and mount it on a corresponding `div` element.
+  - CC Global Header has two required attributes, `base-url` and `donation-url` , which are the URLs used for the API call and the Donation button respectively. For a development environment, the `base-url` could be `http://127.0.0.1:8000`. Note: the `base-url` value should not have a trailing slash.
+    - `<cc-global-header base_url="http://127.0.0.1:8000" donation_url="http:/example.com" />`
+  - CC Global Footer and CC Explore have just one required attribute each, a `donation-url` attribute which is the URL used for the Donation buttons.
+    - `<cc-global-footer donation_url="http://example.com" />`
+    - `cc-explore donation_url="http://example.com" />`
 
 Example for the `cc-explore` component:
 
 ```html
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css"
+/>
 <script src="https://unpkg.com/vue@next"></script>
 <script src="./dist/cc-global.min.js"></script>
 
 <div id="explore-cc">
-  <cc-explore />
+  <cc-explore donation-url="http://example.com" />
 </div>
 
 <script>
