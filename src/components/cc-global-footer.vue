@@ -166,7 +166,7 @@
                 <p>Help us keep the internet free and open.</p>
                 <a
                   class="button small donate"
-                  :href="donation_link"
+                  :href="donation_url"
                   target="_blank"
                 >
                   <i
@@ -191,12 +191,7 @@ export default defineComponent({
       type: String,
       required: true,
     },
-  },
-  data() {
-    return {
-      donation_link: this.donation_url,
-    };
-  },
+  }
 });
 </script>
 <style scoped></style>

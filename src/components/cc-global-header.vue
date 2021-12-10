@@ -7,7 +7,8 @@
           <!-- Donate button -->
           <a
             class="button donate"
-            :href="donation_link"
+            :href="donation_url"
+            target="_blank"
           >
             <i class="icon heart"></i>
             Donate
@@ -121,7 +122,6 @@ export default defineComponent({
     return {
       isBurgerMenuActive: false,
       menus: {},
-      donation_link: this.donation_url,
     };
   },
   methods: {

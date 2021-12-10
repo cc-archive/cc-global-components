@@ -42,7 +42,7 @@
               <a
                 class="button small donate"
                 target="_blank"
-                :href="donation_link"
+                :href="donation_url"
               >
                 <i
                   class="icon cc-letterheart margin-right-small is-size-5 padding-top-smaller"
@@ -143,7 +143,6 @@ export default defineComponent({
   data() {
     return {
       isActive: false,
-      donation_link: this.donation_url,
     };
   },
   methods: {
