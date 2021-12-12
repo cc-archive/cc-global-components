@@ -5,11 +5,7 @@
       <div class="navbar-menu is-active">
         <div class="navbar-start">
           <!-- Donate button -->
-          <a
-            class="button donate"
-            :href="donationUrl"
-            target="_blank"
-          >
+          <a class="button donate" :href="donationUrl" target="_blank">
             <i class="icon heart"></i>
             Donate
           </a>
@@ -96,10 +92,38 @@ export default defineComponent({
   name: "cc-golbal-header",
   beforeCreate() {
     var requestPath = "/wp-json/ccnavigation-header/menu";
-    var requestUrl = this.baseUrl.replace(/\/$/, '') + requestPath;
+    var requestUrl = this.baseUrl.replace(/\/$/, "") + requestPath;
+    var vm = this;
     axios
       .get(requestUrl)
-      .then((response) => (this.menus = response.data));
+      .then((response) => (this.menus = response.data))
+      .catch(function (err) {
+        if (process.env.NODE_ENV === "development") {
+          vm.menus = [
+            {
+              ID: 1,
+              url: "#",
+              title: "Menu 1",
+              child_items: [
+                { ID: 1, url: "#", title: "Item 1" },
+                { ID: 2, url: "#", title: "Item 2" },
+                { ID: 3, url: "#", title: "Item 3" },
+              ],
+            },
+            { ID: 2, url: "#", title: "Menu 2" },
+            {
+              ID: 3,
+              url: "#",
+              title: "Menu 3",
+              child_items: [
+                { ID: 1, url: "#", title: "Item 1" },
+                { ID: 2, url: "#", title: "Item 2" },
+              ],
+            },
+            { ID: 4, url: "#", title: "Menu 4" },
+          ];
+        }
+      });
   },
   props: {
     ariaPrimaryLabel: {
