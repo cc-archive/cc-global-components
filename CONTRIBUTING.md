@@ -83,6 +83,7 @@ For the `cc-global-header` component, you will need to add Axios via CDN:
 ```html
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
+However, if for some reason the API call is unsuccesful, maybe due to Wordpress being unavaible, there are dummy Menu items that will display but this feature is available only for Development environments. 
 
 ## Publishing a release
 
