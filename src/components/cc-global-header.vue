@@ -95,7 +95,7 @@ if (process.env.NODE_ENV === "development") {
 export default defineComponent({
   name: "cc-golbal-header",
   beforeCreate() {
-    var requestPath = "/wp-json/ccnavigation-header/menu";
+    var requestPath = "/?rest_route=/ccnavigation-header/menu";
     var requestUrl = this.baseUrl.replace(/\/$/, '') + requestPath;
     axios
       .get(requestUrl)
