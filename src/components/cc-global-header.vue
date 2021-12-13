@@ -95,7 +95,6 @@ export default defineComponent({
     var requestUrl = this.baseUrl.replace(/\/$/, "") + requestPath;
     var vm = this;
     if (this.isDevelopmentMode) {
-      console.log(this.isDevelopmentMode);
       vm.menus = [
         {
           ID: 1,
@@ -122,7 +121,6 @@ export default defineComponent({
     } else {
       axios.get(requestUrl).then((response) => (vm.menus = response.data));
     }
-    console.log(this.menus);
   },
   props: {
     ariaPrimaryLabel: {

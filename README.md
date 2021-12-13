@@ -33,7 +33,7 @@ CC Global Footer requires a `donation-url` attribute which is the URL used for t
 
 ### CC Global Header
 
-The CC Global Header has two required attributes, `base-url` and `donation-url` , which are the URLs used for the API call and the Donation button respectively. There is one additional attribute `isDevelopmentMode` you can set which renders placeholder Menu Items if you are in a development environment. However, if you have WordPress setup correctly and you want to test this component with real Nav Menu items, you can use your development URL, e.g `http://127.0.0.1:8000`.
+The CC Global Header has two required attributes, `base-url` and `donation-url` , which are the URLs used for the API call and the Donation button respectively. There is one additional attribute `isDevelopmentMode` you can set which renders placeholder Menu Items if you are in a development environment. However, if you have WordPress setup correctly and you want to test this component with real Nav Menu items, you should not pass the `isDevelopmentMode` attribute. For a development environment, an example of a `base-url` is `http://127.0.0.1:8000`.
 
 ```html
 <cc-global-header
