@@ -90,40 +90,39 @@ if (process.env.NODE_ENV === "development") {
 }
 export default defineComponent({
   name: "cc-golbal-header",
-  beforeCreate() {
+  created() {
     var requestPath = "/wp-json/ccnavigation-header/menu";
     var requestUrl = this.baseUrl.replace(/\/$/, "") + requestPath;
     var vm = this;
-    axios
-      .get(requestUrl)
-      .then((response) => (this.menus = response.data))
-      .catch(function (err) {
-        if (process.env.NODE_ENV === "development") {
-          vm.menus = [
-            {
-              ID: 1,
-              url: "#",
-              title: "Menu 1",
-              child_items: [
-                { ID: 1, url: "#", title: "Item 1" },
-                { ID: 2, url: "#", title: "Item 2" },
-                { ID: 3, url: "#", title: "Item 3" },
-              ],
-            },
-            { ID: 2, url: "#", title: "Menu 2" },
-            {
-              ID: 3,
-              url: "#",
-              title: "Menu 3",
-              child_items: [
-                { ID: 1, url: "#", title: "Item 1" },
-                { ID: 2, url: "#", title: "Item 2" },
-              ],
-            },
-            { ID: 4, url: "#", title: "Menu 4" },
-          ];
-        }
-      });
+    if (this.isDevelopmentMode) {
+      console.log(this.isDevelopmentMode);
+      vm.menus = [
+        {
+          ID: 1,
+          url: "#",
+          title: "Menu 1",
+          child_items: [
+            { ID: 1, url: "#", title: "Item 1" },
+            { ID: 2, url: "#", title: "Item 2" },
+            { ID: 3, url: "#", title: "Item 3" },
+          ],
+        },
+        { ID: 2, url: "#", title: "Menu 2" },
+        {
+          ID: 3,
+          url: "#",
+          title: "Menu 3",
+          child_items: [
+            { ID: 1, url: "#", title: "Item 1" },
+            { ID: 2, url: "#", title: "Item 2" },
+          ],
+        },
+        { ID: 4, url: "#", title: "Menu 4" },
+      ];
+    } else {
+      axios.get(requestUrl).then((response) => (vm.menus = response.data));
+    }
+    console.log(this.menus);
   },
   props: {
     ariaPrimaryLabel: {
@@ -141,6 +140,9 @@ export default defineComponent({
     donationUrl: {
       type: String,
       required: true,
+    },
+    isDevelopmentMode: {
+      type: Boolean,
     },
   },
   data() {
