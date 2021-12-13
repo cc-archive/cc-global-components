@@ -87,7 +87,7 @@ For the `cc-global-header` component, you will need to add Axios via CDN:
 In your development setup, we have a `isDevelopmentMode` attribute you can pass to the CC Global Header element to render placeholder Menu items.
 
 ```html
-<cc-global-header donation-url="http://example.com" isDevelopmentMode />
+<cc-global-header donation-url="http://example.com" is-development-mode />
 ```
 
 ## Publishing a release
