@@ -42,8 +42,6 @@ The CC Global Header has two required attributes, `base-url` and `donation-url` 
 />
 ```
 
-**Note:** be sure to enable WordPress permalinks in order for the CC Global Header to be able to retrieve the WordPress global menu via an API request.
-
 ### CC Global Footer
 
 CC Global Footer requires a `donation-url` attribute which is the URL used for the Donation button.
