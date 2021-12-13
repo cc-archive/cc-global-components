@@ -92,7 +92,7 @@ export default defineComponent({
   name: "cc-golbal-header",
   created() {
     var vm = this;
-    var requestPath = "/wp-json/ccnavigation-header/menu";
+    var requestPath = "/?rest_route=/ccnavigation-header/menu";
     var requestUrl = vm.baseUrl.replace(/\/$/, "") + requestPath;
     if (vm.isDevelopmentMode) {
       vm.menus = [
