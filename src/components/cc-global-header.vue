@@ -91,10 +91,10 @@ if (process.env.NODE_ENV === "development") {
 export default defineComponent({
   name: "cc-golbal-header",
   created() {
-    var requestPath = "/wp-json/ccnavigation-header/menu";
-    var requestUrl = this.baseUrl.replace(/\/$/, "") + requestPath;
     var vm = this;
-    if (this.isDevelopmentMode) {
+    var requestPath = "/wp-json/ccnavigation-header/menu";
+    var requestUrl = vm.baseUrl.replace(/\/$/, "") + requestPath;
+    if (vm.isDevelopmentMode) {
       vm.menus = [
         {
           ID: 1,
