@@ -57,8 +57,9 @@ Integrate the CC Global Components into downstream projects with the following s
 1. Add Vue JS via CDN
 2. Add the stylesheets for Fonts and Vocabulary
 3. Include the CC Global Components from CDN
-4. Add the desired component(s) to your template within a container `div`
-5. Render the components in the template via JavaScript
+4. Create a parent `div` element with class `container` so as to add a default left and right padding to the components. The CC-Global-Footer can be excluded from this parent element since it's required to have a full width.
+5. Add the desired component(s) to your template within a container `div`
+6. Render the components in the template via JavaScript
 
 Example for the `cc-explore` component:
 
@@ -74,8 +75,10 @@ Example for the `cc-explore` component:
 <script src="https://unpkg.com/vue@next"></script>
 <script src="https://unpkg.com/@creativecommons/cc-global-components@0.1.0/dist/cc-globals.min.js"></script>
 
-<div id="explore-cc">
-  <cc-explore donation-url="http://example.com" />
+<div class="container">
+  <div id="explore-cc">
+    <cc-explore donation-url="http://example.com" />
+  </div>
 </div>
 
 <script>
