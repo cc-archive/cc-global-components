@@ -5,11 +5,7 @@
       <div class="navbar-menu">
         <div class="navbar-start">
           <!-- Donate button -->
-          <a
-            class="button donate"
-            :href="donationUrl"
-            target="_blank"
-          >
+          <a class="button donate" :href="donationUrl" target="_blank">
             <i class="icon heart"></i>
             Donate
           </a>
@@ -96,10 +92,8 @@ export default defineComponent({
   name: "cc-golbal-header",
   beforeCreate() {
     var requestPath = "/?rest_route=/ccnavigation-header/menu";
-    var requestUrl = this.baseUrl.replace(/\/$/, '') + requestPath;
-    axios
-      .get(requestUrl)
-      .then((response) => (this.menus = response.data));
+    var requestUrl = this.baseUrl.replace(/\/$/, "") + requestPath;
+    axios.get(requestUrl).then((response) => (this.menus = response.data));
   },
   props: {
     ariaPrimaryLabel: {
@@ -165,21 +159,21 @@ svg {
   height: 73px;
 }
 .navbar {
-    padding: 0;
+  padding: 0;
 }
 .navbar.is-default {
-    grid-template-columns: auto 1fr;
-    padding: 0 5rem 1.5rem 5.25rem;
+  grid-template-columns: auto 1fr;
+  padding: 0 5rem 1.5rem 5.25rem;
 }
 
 @media screen and (min-width: 769px), print {
   .navbar.is-default .navbar-menu .navbar-start {
-      top: -3.8rem;
+    top: -3.8rem;
   }
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .navbar.is-default {
-      display: flex;
+    display: flex;
   }
 }
 </style>

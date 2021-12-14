@@ -154,7 +154,7 @@ export default defineComponent({
 </script>
 <style scoped>
 .cc-global-header .open-tab {
-    display: block;
-    bottom: -2rem;
+  display: block;
+  bottom: -2rem;
 }
 </style>
