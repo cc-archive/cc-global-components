@@ -4,7 +4,7 @@
     :class="{ 'is-active': isActive }"
     class="cc-global-header"
   >
-    <div class="container">
+    <div>
       <a
         class="open-tab"
         @click="toggleCCExplore"
