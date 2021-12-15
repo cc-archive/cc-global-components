@@ -88,6 +88,12 @@ For the `cc-global-header` component, you will need to add Axios via CDN:
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
 
+In your development setup, we have a `useMenuPlaceholders` attribute you can pass to the CC Global Header element to render placeholder Menu items.
+
+```html
+<cc-global-header donation-url="http://example.com" use-menu-placeholders />
+```
+
 ## Publishing a release
 
 Use the following steps when publishing a new CC Global Components release.
@@ -97,6 +103,6 @@ Use the following steps when publishing a new CC Global Components release.
 3. Run `npm install` to automatically update project metadata in `package-lock.json`
 4. Merge the project metadata changes into the `main` branch
 5. Create a new release/tag on GitHub from the latest commit in `main`
-    - use only the version number as the tag (without any prefix or suffix)
+   - use only the version number as the tag (without any prefix or suffix)
 6. Build the project for NPM/unpkg with `npm run build:unpkg`
 7. Run `npm publish` to publish latest version on NPM

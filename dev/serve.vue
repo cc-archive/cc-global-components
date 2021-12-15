@@ -32,6 +32,7 @@ export default defineComponent({
       <cc-global-header
         base-url="http://127.0.0.1:8000"
         donation-url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&amp;c_src2=NavBar"
+        use-menu-placeholders
       />
     </div>
     <cc-global-footer

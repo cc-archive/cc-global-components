@@ -34,10 +34,15 @@
         :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }"
       >
         <div class="navbar-end">
+          <p v-if="errorMessage" class="navbar-item navbar-link is-arrowless">
+            We are having trouble loading the menu
+            <br />
+            Error Message: {{ errorMessage }}.
+          </p>
           <div class="" v-for="menu in menus" :key="menu.ID">
             <a
               v-if="!menu.child_items"
-              class="navbar_item navbar-link is-arrowless"
+              class="navbar-item navbar-link is-arrowless"
               tabindex="0"
               :href="menu.url"
             >
@@ -90,10 +95,42 @@ if (process.env.NODE_ENV === "development") {
 }
 export default defineComponent({
   name: "cc-golbal-header",
-  beforeCreate() {
+  created() {
+    var vm = this;
     var requestPath = "/?rest_route=/ccnavigation-header/menu";
-    var requestUrl = this.baseUrl.replace(/\/$/, "") + requestPath;
-    axios.get(requestUrl).then((response) => (this.menus = response.data));
+    var requestUrl = vm.baseUrl.replace(/\/$/, "") + requestPath;
+    if (vm.useMenuPlaceholders) {
+      vm.menus = [
+        {
+          ID: 1,
+          url: "#",
+          title: "Menu 1",
+          child_items: [
+            { ID: 1, url: "#", title: "Item 1" },
+            { ID: 2, url: "#", title: "Item 2" },
+            { ID: 3, url: "#", title: "Item 3" },
+          ],
+        },
+        { ID: 2, url: "#", title: "Menu 2" },
+        {
+          ID: 3,
+          url: "#",
+          title: "Menu 3",
+          child_items: [
+            { ID: 1, url: "#", title: "Item 1" },
+            { ID: 2, url: "#", title: "Item 2" },
+          ],
+        },
+        { ID: 4, url: "#", title: "Menu 4" },
+      ];
+    } else {
+      axios
+        .get(requestUrl)
+        .then((response) => (vm.menus = response.data))
+        .catch((error) => {
+          vm.errorMessage = error.message;
+        });
+    }
   },
   props: {
     ariaPrimaryLabel: {
@@ -112,11 +149,15 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    useMenuPlaceholders: {
+      type: Boolean,
+    },
   },
   data() {
     return {
       isBurgerMenuActive: false,
       menus: {},
+      errorMessage: "",
     };
   },
   methods: {
