@@ -53,6 +53,8 @@ To include the components in an HTML template:
     - `<cc-global-footer donation-url="http://example.com" />`
     - `cc-explore donation-url="http://example.com" />`
 
+**Note:** Wrap the components in a parent `div` element with class `container` so as to add a default left and right padding to the components. The CC-Global-Footer can be excluded from this parent element since it's required to have a full width.
+
 Example for the `cc-explore` component:
 
 ```html
@@ -67,8 +69,10 @@ Example for the `cc-explore` component:
 <script src="https://unpkg.com/vue@next"></script>
 <script src="./dist/cc-global.min.js"></script>
 
-<div id="explore-cc">
-  <cc-explore donation-url="http://example.com" />
+<div class="container">
+  <div id="explore-cc">
+    <cc-explore donation-url="http://example.com" />
+  </div>
 </div>
 
 <script>

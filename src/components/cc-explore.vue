@@ -4,7 +4,7 @@
     :class="{ 'is-active': isActive }"
     class="cc-global-header"
   >
-    <div class="container">
+    <div>
       <a
         class="open-tab"
         @click="toggleCCExplore"
@@ -155,5 +155,6 @@ export default defineComponent({
 <style scoped>
 .cc-global-header .open-tab {
   display: block;
+  bottom: -2rem;
 }
 </style>

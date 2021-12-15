@@ -71,11 +71,11 @@
             <div class="column is-full">
               <nav aria-label="footerlinks" class="footer-navigation">
                 <ul class="menu">
-                  <li><a href="#" class="menu-item">Contact</a></li>
-                  <li><a href="#" class="menu-item">Newsletter</a></li>
-                  <li><a href="#" class="menu-item">Privacy</a></li>
-                  <li><a href="#" class="menu-item">Policies</a></li>
-                  <li><a href="#" class="menu-item">Terms</a></li>
+                  <li><a href="/about/contact/" class="menu-item">Contact</a></li>
+                  <li><a href="https://mail.creativecommons.org/subscribe" class="menu-item">Newsletter</a></li>
+                  <li><a href="/privacy/" class="menu-item">Privacy</a></li>
+                  <li><a href="/policies/" class="menu-item">Policies</a></li>
+                  <li><a href="/terms/" class="menu-item">Terms</a></li>
                 </ul>
               </nav>
             </div>
@@ -129,19 +129,19 @@
                 <p class="caption">
                   Except where otherwise
                   <a
-                    href="https://creativecommons.org/policies#license"
+                    href="/policies/#license"
                     target="_blank"
                     rel="noopener"
                     >noted</a
                   >, content on this site is licensed under a
                   <a
-                    href="https://creativecommons.org/licenses/by/4.0/"
+                    href="/licenses/by/4.0/"
                     target="_blank"
                     rel="noopener"
                     >Creative Commons Attribution 4.0 International license</a
                   >.
                   <a
-                    href="https://creativecommons.org/website-icons"
+                    href="/website-icons/"
                     target="_blank"
                     rel="noopener"
                     >Icons</a
