@@ -94,7 +94,7 @@ export default defineComponent({
     var vm = this;
     var requestPath = "/?rest_route=/ccnavigation-header/menu";
     var requestUrl = vm.baseUrl.replace(/\/$/, "") + requestPath;
-    if (vm.isDevelopmentMode) {
+    if (vm.useMenuPlaceholders) {
       vm.menus = [
         {
           ID: 1,
@@ -139,7 +139,7 @@ export default defineComponent({
       type: String,
       required: true,
     },
-    isDevelopmentMode: {
+    useMenuPlaceholders: {
       type: Boolean,
     },
   },
