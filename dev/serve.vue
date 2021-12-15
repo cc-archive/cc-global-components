@@ -25,14 +25,16 @@ export default defineComponent({
       rel="stylesheet"
       href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css"
     />
-    <cc-explore
-      donation-url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner"
-    />
-    <cc-global-header
-      base-url="http://127.0.0.1:8000"
-      donation-url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&amp;c_src2=NavBar"
-      use-menu-placeholders
-    />
+    <div class="container">
+      <cc-explore
+        donation-url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner"
+      />
+      <cc-global-header
+        base-url="http://127.0.0.1:8000"
+        donation-url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&amp;c_src2=NavBar"
+        use-menu-placeholders
+      />
+    </div>
     <cc-global-footer
       donation-url="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner"
     />
