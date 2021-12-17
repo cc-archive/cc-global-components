@@ -34,6 +34,9 @@
         :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }"
       >
         <div class="navbar-end">
+          <p v-if="menuLoading" class="navbar-item navbar-link is-arrowless">
+            Loading menu.
+          </p>
           <p v-if="errorMessage" class="navbar-item navbar-link is-arrowless">
             We are having trouble loading the menu
             <br />
@@ -124,10 +127,16 @@ export default defineComponent({
         { ID: 4, url: "#", title: "Menu 4" },
       ];
     } else {
+      vm.menuLoading = true;
       axios
         .get(requestUrl)
-        .then((response) => (vm.menus = response.data))
+        .then((response) => {
+          vm.menuLoading = false;
+          vm.errorMessage = null;
+          vm.menus = response.data;
+        })
         .catch((error) => {
+          vm.menuLoading = false;
           vm.errorMessage = error.message;
         });
     }
@@ -158,6 +167,7 @@ export default defineComponent({
       isBurgerMenuActive: false,
       menus: {},
       errorMessage: "",
+      menuLoading: false,
     };
   },
   methods: {
