@@ -41,7 +41,7 @@
             We are having trouble loading the menu
             <br />
             Error Message: {{ errorMessage }}.
-          ></p>
+          </p>
           <div class="" v-for="menu in menus" :key="menu.ID">
             <a
               v-if="!menu.child_items"
