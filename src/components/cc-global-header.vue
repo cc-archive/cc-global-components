@@ -96,11 +96,43 @@ if (process.env.NODE_ENV === "development") {
 } else {
   var axios = window.axios;
 }
+function retryApiRequest(error) {
+  let config = error.config;
+  // If config does not exist or the retry option is not set, reject
+  if (!config || !config.retry) return Promise.reject(error);
+
+  // Set the variable for keeping track of the retry count
+  config.retryCount = config.retryCount || 0;
+
+  // Check if we've maxed out the total number of retries
+  if (config.retryCount >= config.retry) {
+    // Reject with the errors
+    return Promise.reject(error);
+  }
+
+  // Set the default retry delay in milliseconds
+  const defaultRetryDelay = 1000;
+
+  // Increase the retry count
+  config.retryCount += 1;
+
+  // Create new promise to resolve the request
+  const requestResolver = new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve();
+    }, config.retryDelay || defaultRetryDelay);
+  });
+
+  // Return the promise which recalls axios to retry the request
+  return requestResolver.then(function () {
+    return axios(config);
+  });
+}
 export default defineComponent({
   name: "cc-golbal-header",
   created() {
     var vm = this;
-    var requestPath = "/?rest_route=/ccnavigation-header/menu";
+    var requestPath = "/?rest_route=/ccnavigation-header/men";
     var requestUrl = vm.baseUrl.replace(/\/$/, "") + requestPath;
     if (vm.useMenuPlaceholders) {
       vm.menus = [
@@ -128,40 +160,11 @@ export default defineComponent({
       ];
     } else {
       vm.menuLoading = true;
-      axios.interceptors.response.use(
-        undefined,
-        function retryApiRequest(error) {
-          var config = error.config;
-          // If config does not exist or the retry option is not set, reject
-          if (!config || !config.retry) return Promise.reject(error);
-
-          // Set the variable for keeping track of the retry count
-          config.retryCount = config.retryCount || 0;
-
-          // Check if we've maxed out the total number of retries
-          if (config.retryCount >= config.retry) {
-            // Reject with the errors
-            return Promise.reject(error);
-          }
-
-          // Increase the retry count
-          config.retryCount += 1;
-
-          // Create new promise for exponential backoff
-          var exponentialBackOff = new Promise(function (resolve) {
-            setTimeout(function () {
-              resolve();
-            }, config.retryDelay || 1000);
-          });
-
-          // Return the promise which recalls axios to retry the request
-          return exponentialBackOff.then(function () {
-            return axios(config);
-          });
-        }
+      axios.interceptors.response.use(undefined, (error) =>
+        retryApiRequest(error)
       );
       axios
-        .get(requestUrl,{ retry: 5, retryDelay: 3000 })
+        .get(requestUrl, { retry: 5, retryDelay: 3000 })
         .then((response) => {
           vm.menuLoading = false;
           vm.menus = response.data;
