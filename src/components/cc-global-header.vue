@@ -35,7 +35,7 @@
       >
         <div class="navbar-end">
           <p v-if="menuLoading" class="navbar-item navbar-link is-arrowless">
-            Loading menu..
+            Loading menu.
           </p>
           <p
             v-else
