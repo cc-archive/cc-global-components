@@ -137,7 +137,7 @@ export default defineComponent({
         })
         .catch((error) => {
           vm.menuLoading = false;
-          vm.errorMessage = `We are having trouble loading the menu <br /> Error Message: ${error.message}.`;
+          vm.errorMessage = error.message;
         });
     }
   },
