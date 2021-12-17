@@ -37,10 +37,10 @@
           <p v-if="menuLoading" class="navbar-item navbar-link is-arrowless">
             Loading menu.
           </p>
-          <p
-            v-else
-            v-html="errorMessage"
-            class="navbar-item navbar-link is-arrowless"
+          <p v-if="errorMessage" class="navbar-item navbar-link is-arrowless">
+            We are having trouble loading the menu
+            <br />
+            Error Message: {{ errorMessage }}.
           ></p>
           <div class="" v-for="menu in menus" :key="menu.ID">
             <a
