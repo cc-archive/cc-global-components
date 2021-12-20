@@ -1,8 +1,8 @@
 {
   "name": "@creativecommons/cc-global-components",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Global components used across Creative Commons web properties.",
-  "keywords":[
+  "keywords": [
     "Vue.js",
     "component library"
   ],
@@ -12,7 +12,7 @@
     "url": "https://github.com/creativecommons/cc-global-components.git"
   },
   "bugs": {
-    "url" : "https://github.com/creativecommons/cc-global-components"
+    "url": "https://github.com/creativecommons/cc-global-components"
   },
   "license": "MIT",
   "main": "dist/cc-globals.ssr.js",
