@@ -99,7 +99,7 @@ In your development setup, we have a `useMenuPlaceholders` attribute you can pas
 Use the following steps when publishing a new CC Global Components release.
 
 1. Choose a release number using [semantic versioning](https://semver.org/)
-2. Update the project version in `package.json`
+2. [Update the project version](https://docs.npmjs.com/updating-your-published-package-version-number) with `npm version <update_type>`
 3. Run `npm install` to automatically update project metadata in `package-lock.json`
 4. Merge the project metadata changes into the `main` branch
 5. Create a new release/tag on GitHub from the latest commit in `main`
