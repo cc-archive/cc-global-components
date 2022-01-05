@@ -14,8 +14,14 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1641394407000,
+    "contributors": [
+      {
+        "name": "Muluh MG Godson",
+        "email": "godsonmuluh@gmail.com",
+        "commits": 1
+      }
+    ]
   },
   "filePathRelative": "components/cc-global-footer.md"
 }
