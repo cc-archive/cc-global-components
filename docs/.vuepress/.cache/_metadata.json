@@ -1,0 +1,31 @@
+{
+  "hash": "9a4d0852",
+  "browserHash": "144e0e35",
+  "optimized": {
+    "@vuepress/shared": {
+      "file": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/docs/.vuepress/.cache/@vuepress_shared.js",
+      "src": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/node_modules/@vuepress/shared/lib/esm/index.js",
+      "needsInterop": false
+    },
+    "vue": {
+      "file": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/docs/.vuepress/.cache/vue.js",
+      "src": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "file": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/docs/.vuepress/.cache/vue-router.js",
+      "src": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "file": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/docs/.vuepress/.cache/@vueuse_core.js",
+      "src": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/node_modules/@vueuse/core/index.mjs",
+      "needsInterop": false
+    },
+    "nprogress": {
+      "file": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/docs/.vuepress/.cache/nprogress.js",
+      "src": "/var/www/creative_commons/cc-global/my-cc/cc-global-components/node_modules/nprogress/nprogress.js",
+      "needsInterop": true
+    }
+  }
+}

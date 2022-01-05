@@ -1,0 +1,17 @@
+:root {
+    // brand colors
+    --c-brand: rgb(199, 66, 0);
+    --c-brand-light: rgb(254, 237, 233);
+
+    --font-family-code: "JetBrains Mono", monospace;
+
+    --content-width: 1216px;
+  }
+
+
+  // Dark Mode
+  html.dark {
+    // brand colors
+    --c-brand: rgb(199, 66, 0);
+    --c-brand-light: rgb(254, 237, 233);
+  }
