@@ -6,6 +6,21 @@
     --font-family-code: "JetBrains Mono", monospace;
 
     --content-width: 1216px;
+    scroll-behavior: smooth;
+    
+    .navbar .logo {
+      height: 36px;
+    }
+    .navbar {
+      padding: 2.5rem;
+    }
+    @media screen and (min-width: 769px)
+    {
+      .navbar, .navbar-menu, .navbar-start, .navbar-end {
+          align-items: center;
+          display: flex;
+      }
+    }
   }
 
 
