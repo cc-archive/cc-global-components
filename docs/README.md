@@ -2,7 +2,8 @@
 home: true
 title: Documentation | CC Global Components
 lang: en-US
-footer: Copyright (c) 2022 Creative Commons
+footer: Except where otherwise <a href="https://creativecommons.org/policies#license">Noted</a>, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>
+footerHtml: true
 lastUpdated: true
 actions:
   - text: Get Started
