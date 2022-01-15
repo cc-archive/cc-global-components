@@ -16,7 +16,7 @@
       <div class="navbar-brand column is-one-fifth">
         <a class="main-logo" href="/" target="_blank">
           <div class="has-text-black">
-            <img :src="logoPath" alt="Logo">
+            <img :src="logoPath" alt="Logo" />
           </div>
         </a>
       </div>
@@ -188,7 +188,7 @@ export default defineComponent({
     logoPath: {
       type: String,
       required: true,
-    }
+    },
   },
   data() {
     return {

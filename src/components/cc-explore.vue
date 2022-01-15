@@ -21,7 +21,7 @@
               <a class="main-logo" href="/" target="_blank">
                 <div class="column">
                   <div class="has-text-white">
-                    <img :src="logoPath" alt="Logo">
+                    <img :src="logoPath" alt="Logo" />
                   </div>
                 </div>
               </a>
@@ -132,7 +132,7 @@ export default defineComponent({
     logoPath: {
       type: String,
       required: true,
-    }
+    },
   },
   data() {
     return {

@@ -28,8 +28,8 @@ The folder structure is as follows:
 CC Explore requires a `donation-url` attribute which is the URL used for the Donation button and a `logo-path` attribute which is the location of the logo for the CC Web property this component is used on.
 
 ```html
-<cc-explore 
-  donation-url="http://example.com" 
+<cc-explore
+  donation-url="http://example.com"
   logo-path="/example/logo-white.png"
 />
 ```
@@ -52,8 +52,8 @@ The CC Global Header has three required attributes, `base-url`, `donation-url` a
 CC Global Footer requires a `donation-url` attribute which is the URL used for the Donation button and a `logo-path` attribute which is the location of the logo for the CC Web property this component is used on.
 
 ```html
-<cc-global-footer 
-  donation-url="http://example.com" 
+<cc-global-footer
+  donation-url="http://example.com"
   logo-path="/example/logo-white.png"
 />
 ```
@@ -85,8 +85,8 @@ Example for the `cc-explore` component:
 
 <div class="container">
   <div id="explore-cc">
-    <cc-explore 
-      donation-url="http://example.com" 
+    <cc-explore
+      donation-url="http://example.com"
       logo-path="/example/logo-white.png"
     />
   </div>

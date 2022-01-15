@@ -4,9 +4,9 @@
       <div class="columns">
         <div class="column is-one-quarter">
           <a href="/" aria-label="home" class="main-logo margin-bottom-bigger">
-          <div class="has-text-white">
-            <img :src="logoPath" alt="Logo">
-          </div>
+            <div class="has-text-white">
+              <img :src="logoPath" alt="Logo" />
+            </div>
           </a>
           <div>
             <address class="margin-bottom-normal">
@@ -61,8 +61,16 @@
             <div class="column is-full">
               <nav aria-label="footerlinks" class="footer-navigation">
                 <ul class="menu">
-                  <li><a href="/about/contact/" class="menu-item">Contact</a></li>
-                  <li><a href="https://mail.creativecommons.org/subscribe" class="menu-item">Newsletter</a></li>
+                  <li>
+                    <a href="/about/contact/" class="menu-item">Contact</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://mail.creativecommons.org/subscribe"
+                      class="menu-item"
+                      >Newsletter</a
+                    >
+                  </li>
                   <li><a href="/privacy/" class="menu-item">Privacy</a></li>
                   <li><a href="/policies/" class="menu-item">Policies</a></li>
                   <li><a href="/terms/" class="menu-item">Terms</a></li>
@@ -118,22 +126,13 @@
               <div class="attribution margin-top-bigger">
                 <p class="caption">
                   Except where otherwise
-                  <a
-                    href="/policies/#license"
-                    target="_blank"
-                    rel="noopener"
+                  <a href="/policies/#license" target="_blank" rel="noopener"
                     >noted</a
                   >, content on this site is licensed under a
-                  <a
-                    href="/licenses/by/4.0/"
-                    target="_blank"
-                    rel="noopener"
+                  <a href="/licenses/by/4.0/" target="_blank" rel="noopener"
                     >Creative Commons Attribution 4.0 International license</a
                   >.
-                  <a
-                    href="/website-icons/"
-                    target="_blank"
-                    rel="noopener"
+                  <a href="/website-icons/" target="_blank" rel="noopener"
                     >Icons</a
                   >
                   by
@@ -184,8 +183,8 @@ export default defineComponent({
     logoPath: {
       type: String,
       required: true,
-    }
-  }
+    },
+  },
 });
 </script>
 <style scoped></style>
