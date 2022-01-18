@@ -16,7 +16,7 @@
       <div class="navbar-brand column is-one-fifth">
         <a class="main-logo" href="/" target="_blank">
           <div class="has-text-black">
-            <img :src="logoPath" alt="Logo" />
+            <img :src="logoUrl" alt="Logo" />
           </div>
         </a>
       </div>
@@ -185,7 +185,7 @@ export default defineComponent({
     useMenuPlaceholders: {
       type: Boolean,
     },
-    logoPath: {
+    logoUrl: {
       type: String,
       required: true,
     },
