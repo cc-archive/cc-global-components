@@ -5,7 +5,7 @@
         <div class="column is-one-quarter">
           <a href="/" aria-label="home" class="main-logo margin-bottom-bigger">
             <div class="has-text-white">
-              <img :src="logoPath" alt="Logo" />
+              <img :src="logoUrl" alt="Logo" />
             </div>
           </a>
           <div>
@@ -180,7 +180,7 @@ export default defineComponent({
       type: String,
       required: true,
     },
-    logoPath: {
+    logoUrl: {
       type: String,
       required: true,
     },

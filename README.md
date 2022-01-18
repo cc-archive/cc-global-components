@@ -25,36 +25,36 @@ The folder structure is as follows:
 
 ### CC Explore
 
-CC Explore requires a `donation-url` attribute which is the URL used for the Donation button and a `logo-path` attribute which is the location of the logo for the CC Web property this component is used on.
+CC Explore requires a `donation-url` attribute which is the URL used for the Donation button and a `logo-url` attribute which is the location of the logo for the CC Web property this component is used on.
 
 ```html
 <cc-explore
   donation-url="http://example.com"
-  logo-path="/example/logo-white.png"
+  logo-url="/example/logo-white.png"
 />
 ```
 
 ### CC Global Header
 
-The CC Global Header has three required attributes, `base-url`, `donation-url` and `logo-path`, which are the URLs used for the API call, Donation button and Logo respectively. There is one additional attribute `useMenuPlaceholders` you can set which renders placeholder Menu Items if you are in a development environment. However, if you have WordPress setup correctly and you want to test this component with real Nav Menu items, you should not pass the `useMenuPlaceholders` attribute. For a development environment, an example of a `base-url` is `http://127.0.0.1:8000`.
+The CC Global Header has three required attributes, `base-url`, `donation-url` and `logo-url`, which are the URLs used for the API call, Donation button and Logo respectively. There is one additional attribute `useMenuPlaceholders` you can set which renders placeholder Menu Items if you are in a development environment. However, if you have WordPress setup correctly and you want to test this component with real Nav Menu items, you should not pass the `useMenuPlaceholders` attribute. For a development environment, an example of a `base-url` is `http://127.0.0.1:8000`.
 
 ```html
 <cc-global-header
   base-url="http://127.0.0.1:8000"
   donation-url="http:/example.com"
   use-menu-placeholders
-  logo-path="/example/logo-black.png"
+  logo-url="/example/logo-black.png"
 />
 ```
 
 ### CC Global Footer
 
-CC Global Footer requires a `donation-url` attribute which is the URL used for the Donation button and a `logo-path` attribute which is the location of the logo for the CC Web property this component is used on.
+CC Global Footer requires a `donation-url` attribute which is the URL used for the Donation button and a `logo-url` attribute which is the location of the logo for the CC Web property this component is used on.
 
 ```html
 <cc-global-footer
   donation-url="http://example.com"
-  logo-path="/example/logo-white.png"
+  logo-url="/example/logo-white.png"
 />
 ```
 
@@ -87,7 +87,7 @@ Example for the `cc-explore` component:
   <div id="explore-cc">
     <cc-explore
       donation-url="http://example.com"
-      logo-path="/example/logo-white.png"
+      logo-url="/example/logo-white.png"
     />
   </div>
 </div>
