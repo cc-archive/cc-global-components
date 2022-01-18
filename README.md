@@ -58,6 +58,9 @@ CC Global Footer requires a `donation-url` attribute which is the URL used for t
 />
 ```
 
+#### Mixed Content Issues for the `logo-url` attribute
+Mixed content occurs when initial HTML is loaded over a secure HTTPS connection, but other resources (such as images) are loaded over an insecure HTTP connection. Most modern browsers don't display pages with mixed content correctly so it is worth noting that the URL entered into the `logo-url` attribute be appropriately served over HTTPS.
+
 ## Usage
 
 Integrate the CC Global Components into downstream projects with the following steps.
