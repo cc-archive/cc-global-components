@@ -19,6 +19,11 @@
             <img :src="logoUrl" alt="Logo" />
           </div>
         </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" @click="toggleBurgerActive()">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
       <div
         :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }"
@@ -219,7 +224,9 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.navbar-link {
+.navbar-link, .navbar-item, .navbar-burger {
+  color: #767676;
+  cursor: pointer;
   background: transparent;
   border: none;
   font-family: "Roboto Condensed", sans-serif;
@@ -227,12 +234,6 @@ export default defineComponent({
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.5;
-}
-.navbar-item {
-  cursor: pointer;
-}
-.navbar-link {
-  color: #767676;
 }
 svg {
   height: 73px;
