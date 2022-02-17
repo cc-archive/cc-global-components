@@ -45,8 +45,6 @@
               :href="menu.url"
             >
               {{ menu.title }}
-              <!--  <span class="icon"><ExternalLink /></span>-->
-              <i class="icon external-link" v-if="isExternal" />
             </a>
             <div
               v-else

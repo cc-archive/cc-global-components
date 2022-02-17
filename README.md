@@ -77,14 +77,14 @@ Example for the `cc-explore` component:
 ```html
 <link
   rel="stylesheet"
-  href="https://unpkg.com/@creativecommons/fonts@2020.9.3/css/fonts.css"
+  href="https://unpkg.com/@creativecommons/vocabulary-fonts@0.x.x/dist/css/fonts.css"
 />
 <link
   rel="stylesheet"
-  href="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/css/vocabulary.css"
+  href="https://unpkg.com/@creativecommons/vocabulary-styles@0.x.x/dist/css/vocabulary-styles.css"
 />
 <script src="https://unpkg.com/vue@next"></script>
-<script src="https://unpkg.com/@creativecommons/cc-global-components@0.1.0/dist/cc-globals.min.js"></script>
+<script src="https://unpkg.com/@creativecommons/cc-global-components@0.x.x/dist/cc-globals.min.js"></script>
 
 <div class="container">
   <div id="explore-cc">
