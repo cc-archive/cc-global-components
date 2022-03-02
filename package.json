@@ -1,6 +1,6 @@
 {
   "name": "@creativecommons/cc-global-components",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Global components used across Creative Commons web properties.",
   "keywords": [
     "Vue.js",
