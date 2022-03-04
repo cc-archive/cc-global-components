@@ -1,17 +1,11 @@
 <template>
   <header class="vocab header">
-    <nav class="navbar is-default">
-      <div class="navbar-brand"></div>
-      <div class="navbar-menu">
-        <div class="navbar-start">
-          <!-- Donate button -->
-          <a class="button donate" :href="donationUrl" target="_blank">
-            <i class="icon heart"></i>
-            Donate
-          </a>
-        </div>
-      </div>
-    </nav>
+    <div class="is-flex is-justify-content-flex-end">
+      <a class="button donate" :href="donationUrl" target="_blank">
+        <i class="icon heart"></i>
+        Donate
+      </a>
+    </div>
     <nav class="navbar" :aria-label="ariaPrimaryLabel">
       <div class="navbar-brand column is-one-fifth">
         <a class="main-logo" href="/" target="_blank">
@@ -222,6 +216,22 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+a.donate {
+    font-family: "Source Sans Pro",sans-serif;
+    text-transform: none;
+    color: #d14500;
+    background-color: #feede9;
+    border-color: #feede9;
+    line-height: 19px;
+    font-size: 0.75rem;
+    padding: calc(0.25rem - 0.7px) 0.5rem calc(0.25rem - 0.7px) 0.25rem;
+    height: unset;
+    margin-right: 8em;
+}
+
+i.icon, .button.icon {
+  height: unset;
+}
 .navbar-link, .navbar-item, .navbar-burger {
   color: #767676;
   cursor: pointer;
@@ -233,6 +243,11 @@ export default defineComponent({
   text-transform: uppercase;
   line-height: 1.5;
 }
+
+.button .icon:first-child:last-child {
+    margin-right: 1px; 
+}
+
 svg {
   height: 73px;
 }
