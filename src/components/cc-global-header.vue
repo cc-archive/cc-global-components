@@ -13,7 +13,13 @@
             <img :src="logoUrl" alt="Logo" />
           </div>
         </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" @click="toggleBurgerActive()">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          @click="toggleBurgerActive()"
+        >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -217,22 +223,25 @@ export default defineComponent({
 </script>
 <style scoped>
 a.donate {
-    font-family: "Source Sans Pro",sans-serif;
-    text-transform: none;
-    color: #d14500;
-    background-color: #feede9;
-    border-color: #feede9;
-    line-height: 19px;
-    font-size: 0.75rem;
-    padding: calc(0.25rem - 0.7px) 0.5rem calc(0.25rem - 0.7px) 0.25rem;
-    height: unset;
-    margin-right: 8em;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: none;
+  color: #d14500;
+  background-color: #feede9;
+  border-color: #feede9;
+  line-height: 19px;
+  font-size: 0.75rem;
+  padding: calc(0.25rem - 0.7px) 0.5rem calc(0.25rem - 0.7px) 0.25rem;
+  height: unset;
+  margin-right: 8em;
 }
 
-i.icon, .button.icon {
+i.icon,
+.button.icon {
   height: unset;
 }
-.navbar-link, .navbar-item, .navbar-burger {
+.navbar-link,
+.navbar-item,
+.navbar-burger {
   color: #767676;
   cursor: pointer;
   background: transparent;
@@ -245,7 +254,7 @@ i.icon, .button.icon {
 }
 
 .button .icon:first-child:last-child {
-    margin-right: 1px; 
+  margin-right: 1px;
 }
 
 svg {
