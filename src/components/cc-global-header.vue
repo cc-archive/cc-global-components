@@ -7,7 +7,7 @@
       </a>
     </div>
     <nav class="navbar" :aria-label="ariaPrimaryLabel">
-      <div class="navbar-brand is-justify-content-space-between">
+      <div class="navbar-brand">
         <a class="main-logo navbar-item" href="/" target="_blank">
           <div class="has-text-black">
             <img :src="logoUrl" alt="Logo" />
