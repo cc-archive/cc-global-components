@@ -1,11 +1,31 @@
 # Contributing
 
-There are many ways to contribute to this project such as testing, design, and development.
+Thank you for your interest in contributing to CC Open Source! This document is
+a set of guidelines to help you contribute to this project.
+
+There are many ways to contribute to this project such as testing, design, and
+development.
 
 ## Code of Conduct
 
 By participating in this project, you are expected to uphold our [Code of
 Conduct][code_of_conduct].
+
+[code_of_conduct]: https://opensource.creativecommons.org/community/code-of-conduct/
+
+## How to Contribute
+
+Please follow the processes in our general [Contributing Code][contributing]
+guidelines on the Creative Common Open Source website.
+
+[contributing]: https://opensource.creativecommons.org/contributing-code/
+
+
+## Questions or Thoughts?
+
+Talk to us on [one of our community forums][community].
+
+[community]: https://opensource.creativecommons.org/community/
 
 ## Development
 
