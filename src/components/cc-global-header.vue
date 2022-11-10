@@ -13,7 +13,7 @@
             <img :src="logoUrl" alt="Logo" />
           </div>
         </a>
-        <div
+        <a
           role="button"
           class="navbar-burger"
           aria-label="menu"
@@ -24,7 +24,7 @@
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </div>
+      </a>
       </div>
       <div
         :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive, ['active']: navBarOpen }"
