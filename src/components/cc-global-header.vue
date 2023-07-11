@@ -19,14 +19,15 @@
           aria-label="menu"
           aria-expanded="false"
           @click="toggleBurgerActive()"
+          :class="{['active']: navBarOpen}"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+      </a>
       </div>
       <div
-        :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive }"
+        :class="{ ['navbar-menu']: true, ['is-active']: isBurgerMenuActive, ['active']: navBarOpen }"
       >
         <div class="navbar-end">
           <p v-if="menuLoading" class="navbar-item navbar-link is-arrowless">
@@ -199,11 +200,13 @@ export default defineComponent({
       menus: {},
       errorMessage: undefined,
       menuLoading: false,
+      navBarOpen: false,
     };
   },
   methods: {
     toggleBurgerActive() {
       this.isBurgerMenuActive = !this.isBurgerMenuActive;
+      this.navBarOpen = !this.navBarOpen;
     },
     openMenu() {
       this.isOpen = true;
@@ -270,7 +273,7 @@ svg {
 
 @media screen and (min-width: 769px), print {
   .navbar.is-default .navbar-menu .navbar-start {
-    top: -3.8rem;
+    top: -4.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -278,4 +281,36 @@ svg {
     display: flex;
   }
 }
+
+.active span:nth-of-type(1) {
+  -webkit-transform: translateY(5px) rotate(-40deg);
+  -ms-transform: translateY(5px) rotate(-40deg);
+  transform: translateY(5px) rotate(-40deg);
+  background-color: #000000;
+}
+
+.active span:nth-of-type(2) {
+  opacity: 0;
+  background-color: #000000;
+}
+
+.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-5px) rotate(40deg);
+  -ms-transform: translateY(-5px) rotate(40deg);
+  transform: translateY(-5px) rotate(40deg);
+  background-color: #000000;
+}
+
+.navbar-burger span {
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+  position: absolute;
+  transform-origin: center;
+  left: calc(10% - 10px);
+  transition-duration: 86ms;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+}
+
 </style>
